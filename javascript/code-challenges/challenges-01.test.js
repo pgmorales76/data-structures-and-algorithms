@@ -43,7 +43,6 @@ const addExclamation = (arr) => {
   /* the argument value of addOne, dot notation, forEach method, argument value, arrow expression, name of
   local array, dot notation, push method, and argument value with "!" added */
   // Return statement
-
   arr.forEach(value => exclamation_point_array.push(value + '!'));
   console.log(exclamation_point_array);
   return exclamation_point_array;
