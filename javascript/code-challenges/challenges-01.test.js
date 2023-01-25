@@ -136,6 +136,7 @@ const addNumbers = (num, arr, times, callback) => {
   // Incrementation step increments i
   // Return statement
   for (let i = 0; i < times; i++) {
+    // callback function with array argument value, first, to iterate over it and num argument value, second, to limit iterations
     callback(arr, num);
   }
   return arr;
