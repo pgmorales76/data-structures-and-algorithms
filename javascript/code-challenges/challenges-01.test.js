@@ -157,11 +157,28 @@ The inventory is formatted like this:
   { name: 'blueberries', available: false }
 ]
 
-This function should use forEach to populate your grocery list based on the store's inventory. If the item is available, add it to your list. Return the final list.
+This function should use forEach to populate your grocery list based on the store's inventory. If the item is available,
+add it to your list. Return the final list.
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
   // Solution code here...
+  // availableItems is an array of objects, with each object being two key/value pairs
+
+  // Here's the local (new) array
+  let final_list = [];
+
+  // forEach method to populate final list
+  availableItems.forEach(object => {
+    // if statement with object argument value and available property as condition
+    if(object.available) {
+      // Statement includes new array, dot noration, push method with object as argument value, dot notation, and name property
+      final_list.push(object.name);
+    }
+  });
+  
+  // Returning final list
+  return final_list;
 };
 
 /* ------------------------------------------------------------------------------------------------
