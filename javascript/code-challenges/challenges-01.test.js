@@ -16,6 +16,8 @@ const addOne = (arr) => {
   let incremented_array = [];
 
   // Returning a new array of numbers, incremented by 1
+  // the argument value of addOne, dot notation, forEach method, argument value, arrow expression, name of local array, dot notation, push method, and argument value with incrementation
+  // Return statement
   arr.forEach(value => incremented_array.push(value + 1));
   return incremented_array;
 };
