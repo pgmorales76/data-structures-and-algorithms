@@ -121,10 +121,24 @@ Return the modified array.
 
 const addValues = (arr, value) => {
   // Solution code here...
+
+  // Here's the local (new) array
+  let local_array = arr;
+
+  // Pushing the argument value into the new array
+  local_array.push(value);
 };
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
+  // Initialization step sets initial value to 0
+  // Termination step limits the number of times the number should be added to less than i
+  // Incrementation step increments i
+  // Return statement
+  for (let i = 0; i < times; i++) {
+    callback(arr, num);
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
