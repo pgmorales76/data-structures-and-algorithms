@@ -84,10 +84,23 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 
 const greeting = (word) => {
   // Solution code here...
+  /* Return statement and template literal, with argument value from greeting, dot notation, and exclamation point */
+  return `${word.toUpperCase()}!`;
 };
 
 const speaker = (words, callback) => {
   // Solution code here...
+  // words is the name of the array
+  // forEach method is an array method that can be used to execute a function on each element in an array
+
+  // Here is the local (new) array
+  let new_array = [];
+
+  /* argument value from speaker, dot notation, forEach method, argument value, arrow expression, local array, dot notation, push method,
+  callback argument value, and argument value.
+  Return statement */
+  words.forEach(value => new_array.push(callback(value)));
+  return new_array;
 };
 
 /* ------------------------------------------------------------------------------------------------
