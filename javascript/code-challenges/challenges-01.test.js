@@ -3,21 +3,26 @@
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
 
-Write a function named `addOne` that takes an array of numbers, and returns a new array of the numbers, incremented by 1.
+Write a function named `addOne` that takes an array of numbers, and returns a
+new array of the numbers, incremented by 1.
 
-Use `forEach` to loop over the input array and work with each value.  Push the new value into a local array. Return the local array;
------------------------------------------------------------------------------------------------- */
+Use `forEach` to loop over the input array and work with each value.  Push the
+new value into a local array. Return the local array;
+------------------------------------------------------------------------------------------------
+*/
 
 const addOne = (arr) => {
   // Solution code here...
-  // forEach method is an array method that can be used to execute a function on each element in an array
+  // forEach method is an array method that can be used to execute a function on
+  // each element in an array
 
   // Here is the local array
   let incremented_array = [];
 
   // Returning a new array of numbers, incremented by 1
-  /* the argument value of addOne, dot notation, forEach method, argument value, arrow expression, name of
-  local array, dot notation, push method, and argument value with incrementation */
+  /* the argument value of addOne, dot notation, forEach method, argument value,
+  arrow expression, name of local array, dot notation, push method, and argument
+  value with incrementation */
   // Return statement
   arr.forEach(value => incremented_array.push(value + 1));
   console.log(incremented_array);
@@ -27,21 +32,26 @@ const addOne = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named `addExclamation` that takes an array of strings, and returns a new array of the same strings with an "!" added to the end.
+Write a function named `addExclamation` that takes an array of strings, and
+returns a new array of the same strings with an "!" added to the end.
 
-Use `forEach` to loop over the input array. Modify each string, and add the updated value into a local array. Return the local array;
------------------------------------------------------------------------------------------------- */
+Use `forEach` to loop over the input array. Modify each string, and add the
+updated value into a local array. Return the local array;
+------------------------------------------------------------------------------------------------
+*/
 
 const addExclamation = (arr) => {
   // Solution code here...
-  // forEach method is an array method that can be used to execute a function on each element in an array
+  // forEach method is an array method that can be used to execute a function on
+  // each element in an array
 
   // Here is the local array
   let exclamation_point_array = [];
 
   // Returning a new array of strings, with "!" added
-  /* the argument value of addOne, dot notation, forEach method, argument value, arrow expression, name of
-  local array, dot notation, push method, and argument value with "!" added */
+  /* the argument value of addOne, dot notation, forEach method, argument value,
+  arrow expression, name of local array, dot notation, push method, and argument
+  value with "!" added */
   // Return statement
   arr.forEach(value => exclamation_point_array.push(value + '!'));
   console.log(exclamation_point_array);
@@ -51,21 +61,26 @@ const addExclamation = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function named `allUpperCase` that takes an array of strings, and returns a new array of the strings converted to upper case.
+Write a function named `allUpperCase` that takes an array of strings, and
+returns a new array of the strings converted to upper case.
 
-Use `forEach` to loop over the input array. The modified strings should each be added into a local array. Return that local array.
------------------------------------------------------------------------------------------------- */
+Use `forEach` to loop over the input array. The modified strings should each be
+added into a local array. Return that local array.
+------------------------------------------------------------------------------------------------
+*/
 
 const allUpperCase = (arr) => {
   // Solution code here...
-  // forEach method is an array method that can be used to execute a function on each element in an array
+  // forEach method is an array method that can be used to execute a function on
+  // each element in an array
 
   // Here is the local array
   let upper_case_array = [];
 
   // Returning a new array of strings, capitalized
-  /* the argument value of addOne, dot notation, forEach method, argument value, arrow expression, name of
-  local array, dot notation, push method, and argument value, dot notation, and toUpperCase method */
+  /* the argument value of addOne, dot notation, forEach method, argument value,
+  arrow expression, name of local array, dot notation, push method, and argument
+  value, dot notation, and toUpperCase method */
   // Return statement
   arr.forEach(value => upper_case_array.push(value.toUpperCase()));
   console.log(upper_case_array);
@@ -75,30 +90,36 @@ const allUpperCase = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-Write a function named `greeting` that takes in a single string and returns the string in all uppercase letters, and followed by an "!".
+Write a function named `greeting` that takes in a single string and returns the
+string in all uppercase letters, and followed by an "!".
 
-Then, write a function named `speaker` that takes in an array of strings and a callback function.
+Then, write a function named `speaker` that takes in an array of strings and a
+callback function.
 
-Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array.
------------------------------------------------------------------------------------------------- */
+Use `forEach` to build a new array of strings, each string modified by the
+callback. Return the new array.
+------------------------------------------------------------------------------------------------
+*/
 
 const greeting = (word) => {
   // Solution code here...
-  /* Return statement and template literal, with argument value from greeting, dot notation, and exclamation point */
+  /* Return statement and template literal, with argument value from greeting,
+   * dot notation, and exclamation point */
   return `${word.toUpperCase()}!`;
 };
 
 const speaker = (words, callback) => {
   // Solution code here...
   // words is the name of the array
-  // forEach method is an array method that can be used to execute a function on each element in an array
+  // forEach method is an array method that can be used to execute a function on
+  // each element in an array
 
   // Here is the local (new) array
   let new_array = [];
 
-  /* argument value from speaker, dot notation, forEach method, argument value, arrow expression, local array, dot notation, push method,
-  callback argument value, and argument value.
-  Return statement */
+  /* argument value from speaker, dot notation, forEach method, argument value,
+  arrow expression, local array, dot notation, push method, callback argument
+  value, and argument value. Return statement */
   words.forEach(value => new_array.push(callback(value)));
   return new_array;
 };
@@ -106,18 +127,22 @@ const speaker = (words, callback) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function named addValues that takes in an array and a value and pushes the value into the array. This function does not need a return statement.
+Write a function named addValues that takes in an array and a value and pushes
+the value into the array. This function does not need a return statement.
 
 Then, write a function named addNumbers that takes in four arguments:
   - A number to be added to an array
   - An array into which the number should be added
   - The number of times the number should be added
-  - A callback function to use to add the numbers to the array (Hint: you already defined it)
+  - A callback function to use to add the numbers to the array (Hint: you
+already defined it)
 
-Within the addNumbers function, invoke the callback function as many times as necessary, based on the third argument of the addNumbers function.
+Within the addNumbers function, invoke the callback function as many times as
+necessary, based on the third argument of the addNumbers function.
 
 Return the modified array.
------------------------------------------------------------------------------------------------- */
+------------------------------------------------------------------------------------------------
+*/
 
 const addValues = (arr, value) => {
   // Solution code here...
@@ -132,11 +157,11 @@ const addValues = (arr, value) => {
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
   // Initialization step sets initial value to 0
-  // Termination step limits the number of times the number should be added to less than i
-  // Incrementation step increments i
-  // Return statement
+  // Termination step limits the number of times the number should be added to
+  // less than i Incrementation step increments i Return statement
   for (let i = 0; i < times; i++) {
-    // callback function with array argument value, first, to iterate over it and num argument value, second, to limit iterations
+    // callback function with array argument value, first, to iterate over it
+    // and num argument value, second, to limit iterations
     callback(arr, num);
   }
   return arr;
@@ -146,7 +171,8 @@ const addNumbers = (num, arr, times, callback) => {
 
 CHALLENGE 6
 
-Write a function named createList that takes in an array of the current store inventory.
+Write a function named createList that takes in an array of the current store
+inventory.
 
 The inventory is formatted like this:
 [
@@ -157,26 +183,31 @@ The inventory is formatted like this:
   { name: 'blueberries', available: false }
 ]
 
-This function should use forEach to populate your grocery list based on the store's inventory. If the item is available,
-add it to your list. Return the final list.
------------------------------------------------------------------------------------------------- */
+This function should use forEach to populate your grocery list based on the
+store's inventory. If the item is available, add it to your list. Return the
+final list.
+------------------------------------------------------------------------------------------------
+*/
 
 const createList = (availableItems) => {
   // Solution code here...
-  // availableItems is an array of objects, with each object being two key/value pairs
+  // availableItems is an array of objects, with each object being two key/value
+  // pairs
 
   // Here's the local (new) array
   let final_list = [];
 
   // forEach method to populate final list
   availableItems.forEach(object => {
-    // if statement with object argument value and available property as condition
-    if(object.available) {
-      // Statement includes new array, dot noration, push method with object as argument value, dot notation, and name property
+    // if statement with object argument value and available property as
+    // condition
+    if (object.available) {
+      // Statement includes new array, dot noration, push method with object as
+      // argument value, dot notation, and name property
       final_list.push(object.name);
     }
   });
-  
+
   // Returning final list
   return final_list;
 };
@@ -186,14 +217,17 @@ STRETCH - CHALLENGE 7
 
 Write a function named fizzbuzz that takes in an array of numbers.
 
-Iterate over the array using forEach to determine the output based on several rules:
+Iterate over the array using forEach to determine the output based on several
+rules:
   - If a number is divisible by 3, add the word "Fizz" to the output array.
   - If the number is divisible by 5, add the word "Buzz" to the output array.
-  - If the number is divisible by both 3 and 5, add the phrase "Fizz Buzz" to the output array.
+  - If the number is divisible by both 3 and 5, add the phrase "Fizz Buzz" to
+the output array.
   - Otherwise, add the number to the output array.
 
 Return the resulting output array.
------------------------------------------------------------------------------------------------- */
+------------------------------------------------------------------------------------------------
+*/
 
 const fizzbuzz = (arr) => {
   // Solution code here...
@@ -202,59 +236,81 @@ const fizzbuzz = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 TESTS
 
-All the code below will verify that your functions are working to solve the challenges.
+All the code below will verify that your functions are working to solve the
+challenges.
 
 DO NOT CHANGE any of the below code.
 
 Run your tests from the console: jest challenges-01.test.js
 
------------------------------------------------------------------------------------------------- */
+------------------------------------------------------------------------------------------------
+*/
 
 describe('Testing challenge 1', () => {
-  test('It should return an array with 1 added to each value of the original array', () => {
-    expect(addOne([1, 2, 3, 4, 5])).toStrictEqual([2, 3, 4, 5, 6]);
-  });
+  test(
+      'It should return an array with 1 added to each value of the original array',
+      () => {
+        expect(addOne([ 1, 2, 3, 4, 5 ])).toStrictEqual([ 2, 3, 4, 5, 6 ]);
+      });
 });
 
 describe('Testing challenge 2', () => {
-  test('It should return an array with an exclamation point added to each value of the original array', () => {
-    expect(addExclamation(['hi', 'how', 'are', 'you'])).toStrictEqual(['hi!', 'how!', 'are!', 'you!']);
-  });
+  test(
+      'It should return an array with an exclamation point added to each value of the original array',
+      () => {
+        expect(addExclamation([ 'hi', 'how', 'are', 'you' ])).toStrictEqual([
+          'hi!', 'how!', 'are!', 'you!'
+        ]);
+      });
 });
 
 describe('Testing challenge 3', () => {
   test('It should return an array of uppercase strings', () => {
-    expect(allUpperCase(['hi', 'how', 'are', 'you'])).toStrictEqual(['HI', 'HOW', 'ARE', 'YOU']);
+    expect(allUpperCase([ 'hi', 'how', 'are', 'you' ])).toStrictEqual([
+      'HI', 'HOW', 'ARE', 'YOU'
+    ]);
   });
 });
 
 describe('Testing challenge 4', () => {
-  test('It should provide an array of strings, that get uppercased, and a "!" at the end', () => {
-    expect(speaker(['hello', '301', 'students'], greeting)).toStrictEqual(['HELLO!', '301!', 'STUDENTS!']);
-  });
+  test(
+      'It should provide an array of strings, that get uppercased, and a "!" at the end',
+      () => {
+        expect(speaker([ 'hello', '301', 'students' ], greeting))
+            .toStrictEqual([ 'HELLO!', '301!', 'STUDENTS!' ]);
+      });
 });
 
 describe('Testing challenge 5', () => {
   test('It should add the number 8 to the array five times', () => {
-    expect(addNumbers(8, [], 5, addValues)).toStrictEqual([8, 8, 8, 8, 8]);
+    expect(addNumbers(8, [], 5, addValues)).toStrictEqual([ 8, 8, 8, 8, 8 ]);
     expect(addNumbers(8, [], 5, addValues).length).toStrictEqual(5);
   });
 });
 
 describe('Testing challenge 6', () => {
-  const inventory = [{ name: 'apples', available: true }, { name: 'pears', available: true }, { name: 'oranges', available: false }, { name: 'bananas', available: true }, { name: 'blueberries', available: false }];
+  const inventory = [
+    {name : 'apples', available : true}, {name : 'pears', available : true},
+    {name : 'oranges', available : false}, {name : 'bananas', available : true},
+    {name : 'blueberries', available : false}
+  ];
 
   test('It should only add the available items to the list', () => {
-    expect(createList(inventory)).toStrictEqual(['apples', 'pears', 'bananas']);
+    expect(createList(inventory)).toStrictEqual([
+      'apples', 'pears', 'bananas'
+    ]);
     expect(createList(inventory).length).toStrictEqual(3);
   });
 });
 
 xdescribe('Testing challenge 7', () => {
-  const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+  const inputs = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ];
 
   test('It should print out messages or numbers', () => {
-    expect(fizzbuzz(inputs)).toStrictEqual([1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz', 'Buzz', 11, 'Fizz', 13, 14, 'Fizz Buzz', 16]);
+    expect(fizzbuzz(inputs)).toStrictEqual([
+      1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz', 'Buzz', 11, 'Fizz', 13, 14,
+      'Fizz Buzz', 16
+    ]);
     expect(fizzbuzz(inputs).length).toStrictEqual(16);
   });
 });
