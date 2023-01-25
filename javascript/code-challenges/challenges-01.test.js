@@ -20,6 +20,7 @@ const addOne = (arr) => {
   local array, dot notation, push method, and argument value with incrementation */
   // Return statement
   arr.forEach(value => incremented_array.push(value + 1));
+  console.log(incremented_array);
   return incremented_array;
 };
 
