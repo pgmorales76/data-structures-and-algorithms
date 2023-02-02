@@ -176,7 +176,7 @@ const createList = (availableItems) => {
       final_list.push(object.name);
     }
   });
-  
+
   // Returning final list
   return final_list;
 };
